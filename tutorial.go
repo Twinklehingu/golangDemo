@@ -1,40 +1,29 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
-	"strconv"
 ) // used for displaying/print
 
 // entry point
 func main() {
-	// var name string = "Hello Twinkle!"
-	// var number uint16 = 255
-	// number = number + 34
-	// var name string
-	// name = "Hello Twinkle!" // assign value to variable
-	// name = "Bill"
-	// fmt.Println("Hello, world!") //print new line for printing "" and '' to show characters
-	// fmt.Println(name, number)
+	var arr [5]int
+	arr[0] = 1
+	arr[1] = 2
+	fmt.Println(arr)
 
-	// var number = 20000.98
-	// num := "hello"
-	// fmt.Printf("%T", num)
+	nums := [3]int{5, 62, 2}
+	// fmt.Println(len(nums))
 
-	// var numbers uint64
-	// var bl bool
-	// fmt.Println(numbers, bl)
+	sum := 0
 
-	// fmt.Printf("%T", 10) // will show the type which is int
-	// fmt.Printf("Hello %t", 0)
+	arr2D := [2][3]int{{5, 62, 4}, {4, 2, 1}}
+	fmt.Println(arr2D)
 
-	scanner := bufio.NewScanner(os.Stdin)
-	fmt.Printf("Type the year you were born: ")
-	scanner.Scan()
+	for i := 0; i <= len(nums)-1; i++ {
+		sum += nums[i]
+	}
+	fmt.Println(sum)
 
-	input, _ := strconv.ParseInt(scanner.Text(), 10, 64)
-	fmt.Printf("You will be %d years old at the end of 2024", 2024-input)
 }
 
 /*
