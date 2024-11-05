@@ -6,26 +6,23 @@ import (
 
 // entry point
 func main() {
-	var a []int = []int{4, 5, 32, 113, 45, 24, 245, 6, 65, 6}
-	// for i := 0; i < len(a); i++ {
-	// 	fmt.Println(a[i])
-	// }
-	//i is index and element numbere a[i]
-	for i, element := range a {
-		// fmt.Printf("%d: %d\n", i, element)
 
-		for j, element2 := range a {
-			if element2 == element && i != j && i < j {
-				fmt.Println(element)
-				// fmt.Println(i)
-				// fmt.Println(j)
-			}
-		}
+	var mp map[string]int = map[string]int{
+		"apple":  1,
+		"pear":   2,
+		"banana": 3,
 	}
-	// for _, element := range a {
-	// 	fmt.Printf("%d\n", element)
 
-	// }
+	// val, ok := mp["apple"]
+	// fmt.Println(val, ok)
+	val, ok := mp["tim"]
+	fmt.Println(val, ok)
+
+	// mps := make(map[string]int)
+	// fmt.Println(mp["apple"])
+	// mp["orange"] = 100
+	// delete(mp, "orange")
+	fmt.Println(mp)
 
 }
 
