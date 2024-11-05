@@ -6,17 +6,26 @@ import (
 
 // entry point
 func main() {
-	var x [5]int = [5]int{1, 2, 3, 4, 5}
-	var s []int = x[1:3]    //: all entries, 1: meaning start from one to the end, :4 meaning start from zero to 4th index
-	fmt.Println(s[:cap(s)]) // len is 2 and cap is 4
+	var a []int = []int{4, 5, 32, 113, 45, 24, 245, 6, 65, 6}
+	// for i := 0; i < len(a); i++ {
+	// 	fmt.Println(a[i])
+	// }
+	//i is index and element numbere a[i]
+	for i, element := range a {
+		// fmt.Printf("%d: %d\n", i, element)
 
-	var a []int = []int{5, 6, 7, 8, 9}
-	// fmt.Println(cap(a[:3]))
-	b := append(a, 10)
-	fmt.Println(b)
+		for j, element2 := range a {
+			if element2 == element && i != j && i < j {
+				fmt.Println(element)
+				// fmt.Println(i)
+				// fmt.Println(j)
+			}
+		}
+	}
+	// for _, element := range a {
+	// 	fmt.Printf("%d\n", element)
 
-	y := make([]int, 5)
-	fmt.Println(y)
+	// }
 
 }
 
