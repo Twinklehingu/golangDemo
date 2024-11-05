@@ -6,23 +6,17 @@ import (
 
 // entry point
 func main() {
-	var arr [5]int
-	arr[0] = 1
-	arr[1] = 2
-	fmt.Println(arr)
+	var x [5]int = [5]int{1, 2, 3, 4, 5}
+	var s []int = x[1:3]    //: all entries, 1: meaning start from one to the end, :4 meaning start from zero to 4th index
+	fmt.Println(s[:cap(s)]) // len is 2 and cap is 4
 
-	nums := [3]int{5, 62, 2}
-	// fmt.Println(len(nums))
+	var a []int = []int{5, 6, 7, 8, 9}
+	// fmt.Println(cap(a[:3]))
+	b := append(a, 10)
+	fmt.Println(b)
 
-	sum := 0
-
-	arr2D := [2][3]int{{5, 62, 4}, {4, 2, 1}}
-	fmt.Println(arr2D)
-
-	for i := 0; i <= len(nums)-1; i++ {
-		sum += nums[i]
-	}
-	fmt.Println(sum)
+	y := make([]int, 5)
+	fmt.Println(y)
 
 }
 
