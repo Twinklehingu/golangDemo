@@ -1,8 +1,13 @@
 package main
 
-import "fmt" // used for displaying/print
+import (
+	"bufio"
+	"fmt"
+	"os"
+	// "strconv"
+) // used for displaying/print
 
-//entry point
+// entry point
 func main() {
 	// var name string = "Hello Twinkle!"
 	// var number uint16 = 255
@@ -14,8 +19,22 @@ func main() {
 	// fmt.Println(name, number)
 
 	// var number = 20000.98
-	num := "hello"
-	fmt.Printf("%T", num)
+	// num := "hello"
+	// fmt.Printf("%T", num)
+
+	// var numbers uint64
+	// var bl bool
+	// fmt.Println(numbers, bl)
+
+	// fmt.Printf("%T", 10) // will show the type which is int
+	// fmt.Printf("Hello %t", 0)
+
+	scanner := bufio.NewScanner(os.Stdin)
+	fmt.Printf("Type something:  ")
+	scanner.Scan()
+
+	input := scanner.Text()
+	fmt.Printf("You typed: %q", input)
 }
 
 /*
