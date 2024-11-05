@@ -2,27 +2,33 @@ package main
 
 import (
 	"fmt"
-) // used for displaying/print
+)
 
-// entry point
+func test(x int) {
+	fmt.Println("Test:", +x)
+
+}
+
+//	func add(x int, y int) (int, int) {
+//		// fmt.Println("Add:", x+y)
+//		return x + y, x - y
+//		// return
+//	}
+func add(x, y int) (z1, z2 int) {
+	defer fmt.Println("hello")
+	z1 = x + y
+	z2 = x - y
+	fmt.Println("Before returning")
+	return
+
+}
 func main() {
+	test(4)
+	test(7)
+	// add(4, 9)
 
-	var mp map[string]int = map[string]int{
-		"apple":  1,
-		"pear":   2,
-		"banana": 3,
-	}
-
-	// val, ok := mp["apple"]
-	// fmt.Println(val, ok)
-	val, ok := mp["tim"]
-	fmt.Println(val, ok)
-
-	// mps := make(map[string]int)
-	// fmt.Println(mp["apple"])
-	// mp["orange"] = 100
-	// delete(mp, "orange")
-	fmt.Println(mp)
+	ans1, ans2 := add(5, 6)
+	fmt.Println(ans1, ans2)
 
 }
 
